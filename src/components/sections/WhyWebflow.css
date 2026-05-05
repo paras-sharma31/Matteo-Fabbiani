@@ -1,0 +1,80 @@
+.why-webflow {
+  background: var(--color-bg-cream);
+}
+
+.webflow .container {
+  padding: 0;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0;
+}
+
+.why-webflow__title {
+  text-align: center;
+  font-family: var(--font-primary);
+  font-size: clamp(36px, 4vw, 56px);
+  font-weight: 500;
+  color: #525252;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  margin-bottom: 80px;
+}
+
+.why-webflow__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(4, auto);
+  grid-auto-flow: column;
+  gap: 0 8vw;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.why-webflow__col {
+  display: contents;
+}
+
+.why-webflow__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 32px 0;
+  border-bottom: 2px solid rgba(26, 26, 26, 0.1);
+}
+
+.why-webflow__dot {
+  width: 5px;
+  height: 5px;
+  background-color: rgba(26, 26, 26, 0.4);
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 15px;
+}
+
+.why-webflow__text {
+  font-family: var(--font-primary);
+  font-size: clamp(18px, 4vw, 24px);
+  color: rgba(26, 26, 26, 0.65);
+  line-height: 1.4;
+  font-weight: 400;
+  margin: 0;
+}
+
+@media (max-width: 991px) {
+  .why-webflow__grid {
+    gap: 0 4vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .why-webflow__title {
+    margin-bottom: 40px;
+  }
+
+  .why-webflow__grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-auto-flow: row;
+    gap: 0;
+  }
+}

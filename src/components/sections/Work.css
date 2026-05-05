@@ -1,0 +1,267 @@
+.work {
+  background: #e7e2dc;
+  overflow: hidden;
+  position: relative;
+}
+
+.work__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 80px;
+  padding-top: 7rem;
+}
+
+@media (max-width: 768px) {
+  .work__header {
+    padding-top: 4rem;
+    margin-bottom: 48px;
+  }
+}
+
+.work__title {
+  font-family: var(--font-primary);
+  font-size: 2.875rem;
+  font-weight: 400;
+  color: var(--color-dark);
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+}
+
+.work__viewport {
+  width: 100%;
+  height: 550px;
+  position: relative;
+  overflow: visible;
+}
+
+.work__track-hover {
+  display: flex;
+  gap: 32px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: max-content;
+  /* Exact width: 4x 600px cards + 3x 50px gaps = 2550px */
+}
+
+.work-card-hover {
+  width: 600px;
+  height: 430px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  background: #111;
+  flex-shrink: 0;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Image fills the full card */
+.work-card__image-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.work-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Text centered over the image */
+.work-card__text-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 32px;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.work-card__overflow-clip {
+  overflow: hidden;
+}
+
+.work-card__title {
+  font-family: var(--font-primary);
+  font-size: 28px;
+  font-weight: 600;
+  color: #fff;
+  margin: 0 0 8px;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.work-card__desc {
+  font-family: var(--font-primary);
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Card 3: Novac */
+.work-card__novac-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 32px;
+  color: rgba(255, 255, 255, 0.4);
+  font-family: var(--font-primary);
+  font-size: 12px;
+  letter-spacing: 0.05em;
+}
+
+.novac-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 24px;
+  color: #fff;
+  font-weight: 400;
+  letter-spacing: -0.05em;
+}
+
+.novac-icon {
+  width: 14px;
+  height: 24px;
+  background: #4ab896;
+  border-radius: 4px 0 4px 0;
+}
+
+.novac-nav {
+  display: flex;
+  gap: 24px;
+}
+
+.work-card__novac-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 48px;
+  flex: 1;
+}
+
+.novac-text-left,
+.novac-text-right {
+  font-family: var(--font-primary);
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.novac-text-right {
+  text-align: right;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.novac-car-mock {
+  width: 300px;
+  height: 150px;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transform: rotate(-15deg) skewX(20deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.car-blue-core {
+  width: 120px;
+  height: 80px;
+  background: #1e3a8a;
+  opacity: 0.8;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+
+.car-green-front,
+.car-green-back {
+  position: absolute;
+  width: 40px;
+  height: 60px;
+  background: #4ab896;
+  border-radius: 20px;
+}
+
+.car-green-front {
+  left: -10px;
+}
+
+.car-green-back {
+  right: -10px;
+}
+
+/* See more link */
+.work__footer {
+  display: flex;
+  justify-content: center;
+}
+
+.work__see-more {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-primary);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--color-dark);
+  text-decoration: none;
+  padding-bottom: 4px;
+}
+
+.work__underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 1.5px;
+  background: var(--color-dark);
+  transition: width 0.35s ease;
+}
+
+.work__see-more:hover .work__underline {
+  width: 100%;
+}
+
+.work__arrow {
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+
+.work__see-more:hover .work__arrow {
+  transform: translateX(4px);
+}
+
+@media (max-width: 991px) {
+  .work__viewport {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    height: auto;
+    padding: 0 4vw 40px;
+    scrollbar-width: none; /* hide scrollbar */
+  }
+  .work__viewport::-webkit-scrollbar {
+    display: none;
+  }
+  .work__track-hover {
+    position: relative;
+    transform: none !important;
+    padding: 0;
+  }
+  .work-card-hover {
+    width: 85vw;
+    max-width: 400px;
+    height: 400px;
+    transform: none !important;
+  }
+}
